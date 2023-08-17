@@ -10,6 +10,7 @@
 
   <body style="margin: 0; height: 100vh;">
     <script type="text/javascript">
+      const TWILIO_VERIFY_SERVICE_URL = "INPUT_HERE_YOUR_TWILIO_VERIFY_SERVICE_URL";
       let currentVisitorData = {};
       let previousMessagesData = null;
 
@@ -21,7 +22,7 @@
       // code can be present on the verify step
 
       const getIFrameURL = (code, verified = false) => {
-        const twilioURL = "https://verify-service-5730-dev.twil.io/index.html";
+        const twilioURL = TWILIO_VERIFY_SERVICE_URL;
 
         if (currentVisitorData.phone && verified) {
           return `${twilioURL}?tel=${encodeURIComponent(
@@ -79,6 +80,10 @@
       };
 
       window.getGliaApi({ version: "v1" }).then((glia) => {
+        if(TWILIO_VERIFY_SERVICE_URL === "INPUT_HERE_YOUR_TWILIO_VERIFY_SERVICE_URL") {
+          alert('Please replace "TWILIO_VERIFY_SERVICE_URL" in the link that has been created by the Twilio Serverless service.');
+          return;
+        }
         glia.addBufferedEventListener(
           glia.EVENTS.VISITOR_STATE,
           handleNewVisitor
