@@ -1,0 +1,30 @@
+
+configInfo
+account              SKe8ce1cca9f77fb80c7be4232aefe155a                                   
+serviceSid           ZS6edeca8d56a5c5f33e2f290362ce31c3                                   
+environment          dev                                                                  
+rootDirectory        /Users/master/moc/glia_two-factor_auth-main/2FA-applet/verify-service
+dependencies         twilio,@twilio/runtime-handler                                       
+environmentVariables VERIFY_SERVICE_SID                                                   
+runtime              node16                                                               
+
+deploymentInfo
+domain            verify-service-5730-dev.twil.io                                                                                                  
+serviceName                                                                                                                                        
+serviceSid        ZS6edeca8d56a5c5f33e2f290362ce31c3                                                                                               
+environmentSuffix dev                                                                                                                              
+environmentSid    ZEe56edf530f43a87b77d2eaa02dd67458                                                                                               
+buildSid          ZBdfb358b2a1c194281f81f1d966eb3296                                                                                               
+runtime           node16                                                                                                                           
+viewLiveLogs      https://www.twilio.com/console/functions/editor/ZS6edeca8d56a5c5f33e2f290362ce31c3/environment/ZEe56edf530f43a87b77d2eaa02dd67458
+
+functions
+public /cancel-verify https://verify-service-5730-dev.twil.io/cancel-verify
+public /check-verify  https://verify-service-5730-dev.twil.io/check-verify 
+public /start-verify  https://verify-service-5730-dev.twil.io/start-verify 
+
+assets
+public /applet.html                            https://verify-service-5730-dev.twil.io/applet.html                           
+public /index.html                             https://verify-service-5730-dev.twil.io/index.html                            
+public /media/flags.007b2705c0a8f69dfdf6.png   https://verify-service-5730-dev.twil.io/media/flags.007b2705c0a8f69dfdf6.png  
+public /media/flags2x.9d5328fb490cddd43f66.png https://verify-service-5730-dev.twil.io/media/flags2x.9d5328fb490cddd43f66.png
