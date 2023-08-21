@@ -77,7 +77,7 @@ Save that "SERVICE SID" value you will need it later to update enviromental vari
 
 ## Download and install project
 
-use node v.14 for this project
+use node v.16 for this project
 
 ```
 git clone https://github.com/nomatterhowyoutry/glia_two-factor_auth.git
